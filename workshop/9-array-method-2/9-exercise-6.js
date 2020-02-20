@@ -9,7 +9,17 @@
 
 function greet(lst) {
     // lst is an array of strings
+function greet(lst) {
+    // lst is an array of strings
+    let greetings = lst.map(function(hello){
+        let sup = 'Hello ' + hello;
+        return sup;
+    })
+    return greetings;
 
+}
+// -------------------------------------------------------------------------
+console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));
 }
 // -------------------------------------------------------------------------
 console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));

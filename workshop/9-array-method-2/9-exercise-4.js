@@ -8,6 +8,11 @@
 // all of the even numbers removed.
 function removeEvens(lst) {
     // lst is an array of strings
+    let odd = lst.filter(function(number){
+        let oddNums = number % 2 !== 0;
+        return oddNums;
+    });
+    return odd;
 
 }
 // -------------------------------------------------------------------------

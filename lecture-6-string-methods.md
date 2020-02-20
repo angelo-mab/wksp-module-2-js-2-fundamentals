@@ -16,19 +16,19 @@ For example, all objects have `toString` and `valueOf` methods.
 
 ```js
 let num = 3;
-num.toString();
+num.toString(); // '3'
 
 let bool = true;
-bool.toString();
+bool.toString(); //'true'
 
 let str = 'hello';
-str.toString();
+str.toString(); //nothing much. 'hello'
 
 let arr = [1, 2, 'three'];
-arr.toString();
+arr.toString(); // 1,2, three
 
 let dip = {value: 3};
-dip.toString();
+dip.toString(); // nothing much
 ```
 
 Let's look at the examples above again using `valueOf`.
@@ -80,8 +80,9 @@ It takes 2 parameters, the value to replace and the new value.
 
 ```js
 // Example
-const sentiment = 'I love programming';
-
+const sentiment2 = 'I love programming';
+sentiment2.replace('I', 'You');
+"You love programming"
 ```
 
 ---
@@ -95,6 +96,8 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
+entiment.slice(2,6);
+"love"
 
 ```
 
@@ -108,6 +111,13 @@ The `.concat()` method is used to join two or more strings.
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
+let partThree = '';
+partThree.concat(partOne,partTwo)
+"Do or do not.There is no try."
+
+//
+partOne.concat(partTwo)
+"Do or do not.There is no try."
 
 ```
 
@@ -120,6 +130,11 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
+truth.split('')
+(33) ["T", "h", "e", " ", "g", "r", "e", "a", "t", "e", "s", "t", " ", "t", "e", "a", "c", "h", "e", "r", ",", " ", "f", "a", "i", "l", "u", "r", "e", " ", "i", "s", "."]
+
+truth.split(' ')
+(5) ["The", "greatest", "teacher,", "failure", "is."]
 
 ```
 
@@ -134,7 +149,16 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+yodaSpeak.indexOf('Anger');
+56
+yodaSpeak.indexOf('anger');
+49
+yodaSpeak.indexOf('Fear');
+0 // it only takes the first one and not every other one
+yodaSpeak.indexOf('fear');
+-1
 
+//-1 means that the string does not exists
 ```
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_

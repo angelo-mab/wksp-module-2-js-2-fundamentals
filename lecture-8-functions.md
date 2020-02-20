@@ -12,9 +12,12 @@
 
 ```js
 // Formula for area of rectangle
-
+height * width
 // Turn that into a more math-like function...
-
+function areaRect(height, width){
+ let area = height * width;
+ return area;
+}
 // Define JavaScript function
 
 // Call the JavaScript function
@@ -56,13 +59,19 @@
 
 ```js
 // Q1. Write a function that returns the sum of 3 numbers.
-
+function sum(sum1, sum2, sum3){
+ let sum = sum1 + sum2 + sum3;
+ return sum;
+}
 
 // Q2. Write a function that returns the square of a number minus twice the number.
-
+function 
 
 // Q3. Write a function that returns the a person's full name, given their first and last names.
-
+function fullName(first, last){
+ let name = first + ' ' + last;
+ return name;
+}
 
 ```
 

@@ -12,10 +12,26 @@
 // map(["bob", "susie"], toUpperCase) returns ["BOB", "SUSIE"]
 
 function map(lst, func) {
-    // lst is an array and func is a function
+  // lst is an array and func is a function
+  /*
+    1. take the index in the list
+    2. pass the index and apply the function associated to 'func', in this case charCount(). 
+    2.1 charCount() function is located below and it returns the length of string passed on by 'lst' in index 'i'
+    3. store and return the product of the charCount into an array and 
+    */
 
+  let arr = [];
+  for (i = 0; i < lst.length; i++) {
+    arr.push(func(lst[i]));
+  }
+  return arr;
 }
 // -------------------------------------------------------------------------
-function charCount(str) { return str.length };
-console.log('Q7: ', map(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'], charCount));
-console.log('Q7: ', map(['Scott', 'Bob', 'Ric', 'Jim'], charCount));
+function charCount(str) {
+  return str.length;
+}
+console.log(
+  "Q7: ",
+  map(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"], charCount)
+);
+console.log("Q7: ", map(["Scott", "Bob", "Ric", "Jim"], charCount));

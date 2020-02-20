@@ -24,6 +24,8 @@ const arrayOne = ['think', 'dream', 'learn', 'write'];
 const arrayTwo = ['thought', 'dreams', 'knowledge', 'truth'];
 
 let newArray = arrayOne.concat(arrayTwo);
+newArray
+(8) ["think", "dream", "learn", "write", "thought", "dreams", "knowledge", "truth"]
 
 ```
 
@@ -38,6 +40,12 @@ The `.join()` method returns the array as a string.
 const lexicon = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
 
 let sentence = lexicon.join();
+lexicon.join('')
+"Thelargeshaggydogbarkedatthesilence"
+lexicon.join(' ')
+"The large shaggy dog barked at the silence"
+lexicon.join()
+"The,large,shaggy,dog,barked,at,the,silence"
 
 ```
 
@@ -52,8 +60,26 @@ And there are so many more.
 Let's dip into the internet and see if we can learn all of these methods collectively.
 
 1. `.includes()`, `.slice()`
+example .include():
+
+let summer = ['annoying', 'sister', 'warrior'];
+console.log('.include()', summer.include('sister')); // true
+console.log('.include()', summer.include('sis')); //false
 2. `.indexOf()`, `.push()` 
 3. `.pop()`, `.sort()`
+
+array.pop() removes the last element of an array and returns that element.
+
+array.sort() sorts array alphabetically and returns the array
+
+example for .pop():
+let array1 = ['alpha', 'beta', 'gamma'];
+array1.pop();
+"gamma"
+array1.pop()
+"beta"
+
+
 4. `.shift()`, `.unshift()`
 5. `.reverse()`, `.lastIndexOf()`
 6. `.splice()`, `.toString()`
@@ -62,6 +88,7 @@ Let's dip into the internet and see if we can learn all of these methods collect
 - Take given methods
     - find an explanation/definition, then write your own.
     - create two examples of each method in use. Be creative. 😛
+
 
 ---
 

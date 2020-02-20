@@ -1,7 +1,7 @@
 // Q6
 // Take the code you wrote in Q5 and now let's create a
 // reusable function that takes two arguments,
-// numbers that dictate the range within which to look for 
+// numbers that dictate the range within which to look for
 // Armstrong numbers.
 
 // This means that our code from the previous question will need to be tweaked a little
@@ -17,7 +17,25 @@
 // http://mathworld.wolfram.com/NarcissisticNumber.html
 
 function identifyArmstrongNumbers(num1, num2) {
-
+  //set the armstrongNumbers as an array
+  let armstrongNumbers = [];
+  for (let i = num1; i <= num2; i++) {
+    //string and splits num1 and stores it into int
+    let ints = i.toString().split("");
+    let sum = 0;
+    ints.forEach(function(number) {
+      let product = 1;
+      for (let j = 0; j < ints.length; j++) {
+        product *= number;
+      }
+      sum += product;
+    });
+    if (sum === i) {
+      armstrongNumbers.push(i);
+    }
+  }
+  //returns the armstrongNumbers after pushing the index
+  return armstrongNumbers;
 }
 
-console.log(identifyArmstrongNumbers(100, 99999));
+console.log(identifyArmstrongNumbers(0, 999999));
